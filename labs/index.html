@@ -7,25 +7,60 @@
 <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 <style>
-body,h1,h2,h3,h4,h5,h6 {font-family: "Raleway", sans-serif}
+  body,h1,h2,h3,h4,h5,h6 {font-family: "Raleway", sans-serif}
 
-body, html {
-  height: 100%;
-  line-height: 1.8;
-}
+  body, html {
+    height: 100%;
+    line-height: 1.8;
+  }
 
-/* Full height image header */
-.title_img {
-  background-position: center;
-  background-size: cover;
-  background-image: url("../img/mit.jpg");
-  height: 30%;
-  /* max-height: 30%; */
-}
+  /* Full height image header */
+  .title_img {
+    background-position: center;
+    background-size: cover;
+    background-image: url("../img/mit.jpg");
+    height: 30%;
+    /* max-height: 30%; */
+  }
 
-.w3-bar .w3-button {
-  padding: 16px;
-}
+  .w3-bar .w3-button {
+    padding: 16px;
+  }
+  .w3-card {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    border-radius: 15px;
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    max-width: 95%;
+    margin: auto;
+    width: 1000px;
+    min-height: 550px;
+    padding: 16px;
+    box-sizing: border-box;
+  }
+
+  .w3-card:hover {
+    transform: scale(1.02);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+  }
+
+  .w3-button {
+    transition: background-color 0.3s ease, transform 0.3s ease;
+  }
+
+  .w3-button:hover {
+    background-color: #ddd;
+    transform: translateY(-2px);
+  }
+  .w3-card img {
+    width: 100%;
+    height: 400px;
+    object-fit: cover;
+    border-radius: 10px;
+  }
 </style>
 
 
@@ -33,12 +68,12 @@ body, html {
 <!-- If you change something in the Navbar you have to change it on each page (sit on top) -->
 <!-- MAKE SURE YOU GET THE RELATIVE PATHS RIGHT FOR THE NAV BAR!!!!-->
 <div class="w3-top">
-  <div class="w3-bar w3-white w3-card" id="myNavbar">
-    <a href="../#home" class="w3-bar-item w3-button w3-wide">RSS Team #7</a>
+  <div class="w3-bar w3-white" id="myNavbar">
+    <a href="#home" class="w3-bar-item w3-button w3-wide">RSS 2025 Team 7</a>
     <!-- Right-sided navbar links -->
     <div class="w3-right w3-hide-small">
-      <a href="../#about" class="w3-bar-item w3-button">About</a>
-      <a href="./" class="w3-bar-item w3-button"><i class="fa fa-folder"></i> Labs</a>
+      <a href="#about" class="w3-bar-item w3-button">About</a>
+      <a href="labs/" class="w3-bar-item w3-button"><i class="fa fa-folder"></i>Labs</a>
       <a href="https://drive.google.com/drive/folders/1sfLhQKcwquYhQhDkhiu0886JQ9QwQkPM?usp=sharing" class="w3-bar-item w3-button"><i class="fa fa-camera"></i>Videos</a>
       <a href="https://github.com/rss2025-7" class="w3-bar-item w3-button"><i class="fa fa-github-square"></i>Github</a>
     </div>
@@ -49,7 +84,6 @@ body, html {
     </a>
   </div>
 </div>
-
 
 <!-- Sidebar on small screens when clicking the menu icon -->
 <nav class="w3-sidebar w3-bar-block w3-black w3-card w3-animate-left w3-hide-medium w3-hide-large" style="display:none" id="mySidebar">
@@ -71,7 +105,7 @@ body, html {
   <!-- Lab Sections -->
   <div class="w3-row-padding w3-white">
     <!-- Example Lab -->
-    <div class="w3-col l6 m6 w3-margin-bottom" style="margin-top:16px;max-width:50%">
+    <!-- <div class="w3-col l6 m6 w3-margin-bottom" style="margin-top:16px;max-width:50%">
       <div class="w3-card w3-center" style="min-height:600px">
         </br>
         <img src="img/charles.jpg" alt="Survival" style="width:95%" onclick="onClick(this)" class="w3-hover-opacity">
@@ -81,12 +115,12 @@ body, html {
           <p><a href="example_lab"><button class="w3-button w3-light-grey w3-block"><i class="fa fa-info-circle"></i> More info</button></a></p>
         </div>
       </div>
-    </div>
+    </div> -->
 
     <div class="w3-col l6 m6 w3-margin-bottom" style="margin-top:16px;max-width:50%">
       <div class="w3-card w3-center" style="min-height:600px">
         </br>
-        <img src="img/charles.jpg" alt="Survival" style="width:95%" onclick="onClick(this)" class="w3-hover-opacity">
+        <img src="img/wall_follower_title.png" alt="Survival" style="width:95%" onclick="onClick(this)" >
         <div class="w3-container" style="margin-top:auto">
           <h3><a href="3">Lab 3: Wall Follower</h3>
           <p>Implementation of our team's wall follower and safety controller, as uploaded to our actual racecar.</p>
@@ -98,7 +132,7 @@ body, html {
     <div class="w3-col l6 m6 w3-margin-bottom" style="margin-top:16px;max-width:50%">
       <div class="w3-card w3-center" style="min-height:600px">
         </br>
-        <img src="img/charles.jpg" alt="Survival" style="width:95%" onclick="onClick(this)" class="w3-hover-opacity">
+        <img src="img/visual_servoing_title.png" alt="Survival" style="width:95%" onclick="onClick(this)">
         <div class="w3-container" style="margin-top:auto">
           <h3><a href="4">Lab 4: Visual Servoing</h3>
           <p>Implementation of our team's computer vision modules, cone parking controller, and line follower, as uploaded to our actual racecar.</p>
@@ -110,7 +144,7 @@ body, html {
     <div class="w3-col l6 m6 w3-margin-bottom" style="margin-top:16px;max-width:50%">
       <div class="w3-card w3-center" style="min-height:600px">
         </br>
-        <img src="img/charles.jpg" alt="Survival" style="width:95%" onclick="onClick(this)" class="w3-hover-opacity">
+        <img src="img/localization_title.png" alt="Survival" style="width:95%" onclick="onClick(this)">
         <div class="w3-container" style="margin-top:auto">
           <h3><a href="5">Lab 5: Localization</h3>
           <p>Implementation of our team's Monte Carlo Localization algorithm, as uploaded to our actual racecar.</p>
@@ -122,7 +156,7 @@ body, html {
     <div class="w3-col l6 m6 w3-margin-bottom" style="margin-top:16px;max-width:50%">
       <div class="w3-card w3-center" style="min-height:600px">
         </br>
-        <img src="img/charles.jpg" alt="Survival" style="width:95%" onclick="onClick(this)" class="w3-hover-opacity">
+        <img src="img/path_planning_title.png" alt="Survival" style="width:95%" onclick="onClick(this)">
         <div class="w3-container" style="margin-top:auto">
           <h3><a href="6">Lab 6: Path-Planning</h3>
           <p>Implementation of our team's various Path Planning (A*, RRT, PRM) algorithms, as uploaded to our actual racecar.</p>
@@ -134,7 +168,7 @@ body, html {
     <div class="w3-col l6 m6 w3-margin-bottom" style="margin-top:16px;max-width:50%">
       <div class="w3-card w3-center" style="min-height:600px">
         </br>
-        <img src="img/charles.jpg" alt="Survival" style="width:95%" onclick="onClick(this)" class="w3-hover-opacity">
+        <img src="img/final_challenge_title.jpg" alt="Survival" style="width:95%" onclick="onClick(this)">
         <div class="w3-container" style="margin-top:auto">
           <h3><a href="final">Final Challenge: Steal the Moon</h3>
           <p>Implementation of our team's Despicable-Me-themed "Heist" (navigation) and "Race" (line-following) systems.</p>
