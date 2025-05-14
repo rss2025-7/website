@@ -8,58 +8,74 @@
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
 <style>
-body,p,h1,h2,h3,h4,h5,h6 {font-family: Palatino Linotype, sans-serif}
+  body,p,h1,h2,h3,h4,h5,h6 {font-family: Palatino Linotype, sans-serif}
 
-body, html {
-  height: 100%;
-  line-height: 1.8;
-}
+  body, html {
+    height: 100%;
+    line-height: 1.8;
+  }
 
-/* Full height image header */
-.title_img {
-  background-position: center;
-  background-size: cover;
-  background-image: url("./img/mit.jpg");
-  height: 30%;
-  /* max-height: 30%; */
-}
+  /* Full height image header */
+  .title_img {
+    background-position: center;
+    background-size: cover;
+    background-image: url("./img/mit.jpg");
+    height: 30%;
+    /* max-height: 30%; */
+  }
 
-.team_member {
-    width: 20%; /* Change this so you can fit x Team members in a row*/
-    float: left;
-    padding: 0% 6px;
-    min-height: 500px;
-}
-.team_member p {
-  font-size: 10px;
-  font-size: 1.5vw;
-}
-.team_member h4 {
-  font-size: 20px;
-  font-size: 3vw;
-}
+  .team_member {
+      width: 20%; /* Change this so you can fit x Team members in a row*/
+      float: left;
+      padding: 0% 6px;
+      min-height: 500px;
+  }
+  .team_member p {
+    font-size: 10px;
+    font-size: 1.5vw;
+  }
+  .team_member h4 {
+    font-size: 20px;
+    font-size: 3vw;
+  }
 
-.headshot {
-    display: block;
-    margin:auto;
-    max-width: 100%;
-    width: 200px;
-    height: 200px;
-    max-height: 200px;
-    overflow: hidden;
-}
+  .headshot {
+      display: block;
+      margin: auto;
+      width: 200px;
+      height: 200px;
+      border-radius: 50%;
+      object-fit: cover;
+      object-position: center;
+  }
 
-.w3-bar .w3-button {
-  padding: 16px;
-}
+  .w3-bar .w3-button {
+    padding: 16px;
+    transition: background-color 0.3s ease, color 0.3s ease;
+  }
+
+  .w3-bar .w3-button:hover {
+    background-color: #f0f0f0;
+    color: #000;
+  }
+  .w3-card {
+    transition: transform 0.3s ease, background-color 0.3s ease;
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+  }
+
+  .w3-card:hover {
+    transform: scale(1.05);
+    background-color: #f0f0f0;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.15);
+  }
 </style>
 
 <body>
 <!-- If you change something in the Navbar you have to change it on each page (sit on top) -->
 <!-- MAKE SURE YOU GET THE RELATIVE PATHS RIGHT FOR THE NAV BAR!!!!-->
 <div class="w3-top">
-  <div class="w3-bar w3-white w3-card" id="myNavbar">
-    <a href="#home" class="w3-bar-item w3-button w3-wide">RSS Team #7</a>
+  <div class="w3-bar w3-white" id="myNavbar">
+    <a href="#home" class="w3-bar-item w3-button w3-wide">RSS 2025 Team 7</a>
     <!-- Right-sided navbar links -->
     <div class="w3-right w3-hide-small">
       <a href="#about" class="w3-bar-item w3-button">About</a>
@@ -97,47 +113,40 @@ body, html {
   </div>
 </header>
 
-<div class="w3-container w3-white" style="padding:5% 5%">
-  <div class="w3-card team_member">
-      <img class="headshot" src="img/wall_e.jfif">
-      <h4>Edward Cheng</h4>
-      <p>yiboc@mit.edu</p>
-      <p>6-4 & 18, Class of 2028</p>
-      <p>These are some template bios; fill this in for each of your team members!
-      </p>
+<div class="w3-container w3-white" style="padding:5% 5%; text-align: center; overflow: hidden;" id="team">
+  <h2 class="w3-center" style="margin-bottom: 16px;">Meet the Team</h2>
+  <div class="w3-row" style="display: flex; justify-content: space-around; gap: 16px; flex-wrap: nowrap;">
+    <div class="w3-card w3-hover-shadow w3-padding" style="flex: 0 0 18%; min-width: 200px;">
+      <img src="img/wall_e.jfif" alt="Edward Cheng" class="headshot w3-circle w3-margin-bottom">
+      <h4 style="margin-bottom: 2px;">Edward Cheng</h4>
+      <p class="w3-opacity" style="margin: 4px 0;">6-4 & 18, Class of 2028</p>
+      <p class="w3-opacity" style="margin: 4px 0;">yiboc@mit.edu</p>
+    </div>
+    <div class="w3-card w3-hover-shadow w3-padding" style="flex: 0 0 18%; min-width: 200px;">
+      <img src="img/r2.jpg" alt="Audrey Lee" class="headshot w3-circle w3-margin-bottom">
+      <h4 style="margin-bottom: 2px;">Audrey Lee</h4>
+      <p class="w3-opacity" style="margin: 4px 0;">6-2, Class of 2025</p>
+      <p class="w3-opacity" style="margin: 4px 0;">audrey16@mit.edu</p>
+    </div>
+    <div class="w3-card w3-hover-shadow w3-padding" style="flex: 0 0 18%; min-width: 200px;">
+      <img src="img/chris.png" alt="Christopher Liem" class="headshot w3-circle w3-margin-bottom">
+      <h4 style="margin-bottom: 2px;">Christopher Liem</h4>
+      <p class="w3-opacity" style="margin: 4px 0;">6-2 & 18, Class of 2027</p>
+      <p class="w3-opacity" style="margin: 4px 0;">cliem@mit.edu</p>
+    </div>
+    <div class="w3-card w3-hover-shadow w3-padding" style="flex: 0 0 18%; min-width: 200px;">
+      <img src="img/r2.jpg" alt="Drew Tufto" class="headshot w3-circle w3-margin-bottom">
+      <h4 style="margin-bottom: 2px;">Drew Tufto</h4>
+      <p class="w3-opacity" style="margin: 4px 0;">6-4 & 16, Class of 2026</p>
+      <p class="w3-opacity" style="margin: 4px 0;">djtufto@mit.edu</p>
+    </div>
+    <div class="w3-card w3-hover-shadow w3-padding" style="flex: 0 0 18%; min-width: 200px;">
+      <img src="img/wall_e.jpg" alt="Richard Yeboah" class="headshot w3-circle w3-margin-bottom">
+      <h4 style="margin-bottom: 2px;">Richard Yeboah</h4>
+      <p class="w3-opacity" style="margin: 4px 0;">6-2, Class of 2026</p>
+      <p class="w3-opacity" style="margin: 4px 0;">rnyeboah@mit.edu</p>
+    </div>
   </div>
-  <div class="w3-card team_member">
-      <img class="headshot" src="img/r2.jpg">
-      <h4>Audrey Lee</h4>
-      <p>audrey16@mit.edu</p>
-      <p>6-2, Class of 2025</p>
-      <p>These are some template bios; fill this in for each of your team members!
-      </p>
-  </div>
-  <div class="w3-card team_member">
-      <img class="headshot" src="img/wall_e.jfif">
-      <h4>Chris Liem</h4>
-      <p>cliem@mit.edu</p>
-      <p>6-2 & 18, Class of 2027</p>
-      <p>These are some template bios; fill this in for each of your team members!
-      </p>
-  </div>
-  <div class="w3-card team_member">
-      <img class="headshot" src="img/r2.jpg">
-      <h4>Drew Tufto</h4>
-      <p>djtufto@mit.edu</p>
-      <p>6-4 & 16, Class of 2026</p>
-      <p>These are some template bios; fill this in for each of your team members!
-      </p>
-  </div>
-  <div class="w3-card team_member">
-    <img class="headshot" src="img/wall_e.jpg">
-    <h4>Richard Yeboah</h4>
-    <p>rnyeboah@mit.edu</p>
-    <p>6-2, Class of 2026</p>
-    <p>These are some template bios; fill this in for each of your team members!
-    </p>
-</div>
 </div>
 
 <!-- Contact Section -->
